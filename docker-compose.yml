@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+  minecraft:
+    image: itzg/minecraft-server
+    container_name: minecraft
+    environment:
+      EULA: "TRUE"
+      MEMORY: 8G
+      TYPE: FORGE
+      VERSION: 1.20.2
+      FORGE_VERSION: recommended
+      FORGE_FORCE_REINSTALL: "true"
+    volumes:
+      - ./minecraft_data:/data
+      - ./minecraft_data/mods:/data/mods
+    ports:
+      - "25565:25565"
+
+volumes:
+  minecraft_data:
+  minecraft_mods:
