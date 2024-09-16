@@ -2,15 +2,14 @@ version: '3.7'
 
 services:
   minecraft:
-    image: itzg/minecraft-server
+    image: itzg/minecraft-server:java11
     container_name: minecraft
     environment:
       EULA: "TRUE"
-      MEMORY: 8G
+      MEMORY: 4G
       TYPE: FORGE
-      VERSION: 1.20.2
-      FORGE_VERSION: recommended
-      FORGE_FORCE_REINSTALL: "true"
+      VERSION: 1.16.5
+      FORGE_FORCE_REINSTALL: "false"
     volumes:
       - ./minecraft_data:/data
       - ./minecraft_data/mods:/data/mods
