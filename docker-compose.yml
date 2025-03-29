@@ -12,10 +12,5 @@ services:
       FORGE_FORCE_REINSTALL: "false"
     volumes:
       - ./minecraft_data:/data
-      - ./minecraft_data/mods:/data/mods
     ports:
       - "25565:25565"
-
-volumes:
-  minecraft_data:
-  minecraft_mods:
